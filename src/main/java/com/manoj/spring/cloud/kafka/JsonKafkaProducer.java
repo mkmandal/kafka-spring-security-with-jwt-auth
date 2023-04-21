@@ -21,14 +21,14 @@ public class JsonKafkaProducer {
 		super();
 		this.kafkaTemplate = kafkaTemplate;
 	}
-//
-//	public void sendMessage(User user) {
-//
-//		logger.info(String.format("Message sent from object %s", user));
-//
-//		Message<User> msg = MessageBuilder.withPayload(user).setHeader(KafkaHeaders.TOPIC, "javaguides_json").build();
-//
-//		kafkaTemplate.send(msg);
-//	}
+
+	public void sendMessage(User user) {
+
+		logger.info(String.format("Message sent from object %s", user));
+
+		Message<User> msg = MessageBuilder.withPayload(user).setHeader(KafkaHeaders.TOPIC, "javaguides_json").build();
+
+		kafkaTemplate.send(msg);
+	}
 
 }

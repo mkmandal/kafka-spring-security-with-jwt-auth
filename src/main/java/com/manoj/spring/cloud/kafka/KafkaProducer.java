@@ -16,11 +16,11 @@ public class KafkaProducer {
 		super();
 		this.kafkaTemplate = kafkaTemplate;
 	}
-//
-//	public void sendMessage(String msg) {
-//
-//		logger.info(String.format("Messages sent %s", msg));
-//		kafkaTemplate.send("javaguides", msg);
-//	}
+
+	public void sendMessage(String msg) {
+
+		logger.info(String.format("Messages sent %s", msg));
+		kafkaTemplate.send("javaguides", msg);
+	}
 
 }

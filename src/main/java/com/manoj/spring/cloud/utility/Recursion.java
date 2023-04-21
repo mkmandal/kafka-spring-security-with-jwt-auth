@@ -1,5 +1,7 @@
 package com.manoj.spring.cloud.utility;
 
+import java.util.HashSet;
+
 public class Recursion {
 
 	static int sum = 0;
@@ -18,7 +20,8 @@ public class Recursion {
 
 		// System.out.println(isPalindrome("MADAMS"));
 
-		System.out.println(fibbonacciNumber(8));
+		//System.out.println(fibbonacciNumber(8));
+		hashSet();
 
 	}
 
@@ -88,5 +91,13 @@ public class Recursion {
 		int slast = fibbonacciNumber(num - 2);
 
 		return last + slast;
+	}
+	
+	private static void hashSet() {
+		 HashSet<Integer> data= new HashSet<Integer>(6);
+		 
+		 data.add(5);
+		 System.out.println(data);
+		
 	}
 }

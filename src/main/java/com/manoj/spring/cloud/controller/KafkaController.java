@@ -31,7 +31,7 @@ public class KafkaController {
 	@GetMapping("/publish")
 	public ResponseEntity<String> publish(@RequestParam("message") String message) {
 
-		//kafkaProducer.sendMessage(message);
+		kafkaProducer.sendMessage(message);
 
 		return ResponseEntity.ok("Sent to the topic");
 
@@ -40,7 +40,7 @@ public class KafkaController {
 	@PostMapping("/publishJsonData")
 	public ResponseEntity<String> publishJson(@RequestBody User user) {
 
-	//	jsonKafkaProducer.sendMessage(user);
+		jsonKafkaProducer.sendMessage(user);
 
 		return ResponseEntity.ok("Json message Sent to the topic");
 
